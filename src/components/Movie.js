@@ -8,11 +8,15 @@ const Movie = (props) => {
   // console.log(props.value);
   return (
     <div id="movie-banner">
-      <div>
-        <h2>{first[id].title}</h2>
-        <h2>{first[id].year}</h2>
-        <h2>{first[id].director}</h2>
-      </div>
+      {!props.condtion ? (
+        <h1>Invalid Id</h1>
+      ) : (
+        <div>
+          <h2>{first[id].title}</h2>
+          <h2>{first[id].year}</h2>
+          <h2>{first[id].director}</h2>
+        </div>
+      )}
     </div>
   );
 };
