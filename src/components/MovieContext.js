@@ -1,4 +1,4 @@
-
+import { createContext } from "react";
 
 const moviesList = [
   {
@@ -32,4 +32,5 @@ const moviesList = [
     director: "Sidney Lumet",
   },
 ]
-
+const UserContext = createContext(moviesList);
+export default UserContext;
